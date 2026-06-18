@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../component/Button";
+import { SchoolImg } from "../assets";
 
 // If you have a router setup file (e.g. main.tsx), add this route:
 // { path: "/", element: <Index /> }
@@ -32,24 +33,27 @@ export default function Homepage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-5xl px-6 py-32 text-center">
-        <span className="inline-flex rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-          Now serving Nigerian schools
-        </span>
-        <h1 className="mt-6 text-5xl font-black tracking-tight text-secondary sm:text-7xl">
-          Smart cards for a{" "}
-          <span className="text-primary">safer school day.</span>
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          Track attendance, verify identity and enable secure payments — one
-          card, one app, peace of mind for every parent.
-        </p>
-        <div className="mt-10 flex justify-center">
-          <Button size="lg" className="h-12 rounded-full px-8 text-base font-bold" asChild>
-            <Link to="/for-school">
-              Explore the School Product <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+      <section
+        className="relative overflow-hidden bg-cover bg-center bg-no-repeat text-white"
+        style={{ backgroundImage: `url(${SchoolImg})` }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative mx-auto max-w-5xl px-6 py-32 text-center sm:py-40">
+          <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+            Now serving Nigerian schools
+          </span>
+          <h1 className="mt-6 text-5xl font-black tracking-tight text-white sm:text-7xl">
+            Smart cards for a <span className="text-[var(--gold)]">safer school day.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+            Track attendance, verify identity and enable secure payments — one card,
+            one app, peace of mind for every parent.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Button asChild size="lg" className="h-12 rounded-full px-8 text-base font-bold">
+              <Link to="/for-school">Explore the School Product <ArrowRight /></Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
