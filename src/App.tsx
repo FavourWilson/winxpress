@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router"
 import Homepage from "./pages/HomePage"
+import ForSchool from "./pages/ForSchool"
 
 
 function App() {
