@@ -133,7 +133,7 @@ function Nav() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X color="red" size={22} /> : <Menu color="white" size={22} />}
         </button>
       </div>
 
